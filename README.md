@@ -4,8 +4,9 @@
 โดยมีการปรับปรุงสถาปัตยกรรมซอฟต์แวร์จาก **Layered Architecture** (Monolithic) ไปสู่ **Client-Server Architecture** (Separated Frontend & Backend)
 
 ## 👤 Student Information
-- **Student Name:** [ใส่ชื่อ-นามสกุลของคุณ]
-- **Student ID:** [ใส่รหัสนักศึกษาของคุณ]
+- **Student Name:** [Atiroj Kulan]
+- **Student ID:** [67543210049-2]
+- **Section:** [Sec 1]
 - **Course:** ENGSE207 - Software Architecture
 
 ---
