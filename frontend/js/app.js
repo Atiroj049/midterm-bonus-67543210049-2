@@ -5,7 +5,37 @@ document.addEventListener('DOMContentLoaded', () => {
     loadBooks();
     BookForm.init(); // เริ่มต้นการทำงานของ Form
     setupFilters();  // ปุ่ม Filter
+    setupDarkMode(); // ✅ เพิ่มฟังก์ชัน Dark Mode ตรงนี้
 });
+
+// --- ฟังก์ชันจัดการ Dark Mode (แบบไอคอนอย่างเดียว) ---
+function setupDarkMode() {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // 1. ตรวจสอบค่าเก่า (ต้องแก้บรรทัดนี้ด้วย)
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggleBtn.textContent = '☀️'; // ❌ ห้ามมีคำว่า Light Mode
+    } else {
+        themeToggleBtn.textContent = '🌙'; // ❌ ห้ามมีคำว่า Dark Mode
+    }
+
+    // 2. เมื่อกดปุ่ม
+    themeToggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        if (body.classList.contains('dark-mode')) {
+            themeToggleBtn.textContent = '☀️'; // ✅ ใส่แค่ไอคอน
+            localStorage.setItem('theme', 'dark');
+        } else {
+            themeToggleBtn.textContent = '🌙'; // ✅ ใส่แค่ไอคอน
+            localStorage.setItem('theme', 'light');
+        }
+    });
+}
+// -----------------------------------------------
 
 // ฟังก์ชันโหลดข้อมูล (เรียกใช้ BookList.render)
 async function loadBooks(status = null) {

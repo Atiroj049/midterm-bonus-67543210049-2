@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Management - Layered</title>
     <link rel="stylesheet" href="css/style.css" />
-    <!-- SweetAlert2 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1>📚 Library Management System</h1>
-        <span class="badge">🏗️ Layered Architecture</span>
+      <header style="position: relative; display: flex; justify-content: center; align-items: center; border-bottom: 3px solid #667eea; padding-bottom: 20px; margin-bottom: 30px;">
+        
+        <div style="text-align: center;">
+            <h1 style="margin: 0;">📚 Library Management System</h1>
+            <span class="badge" style="margin-top: 5px;">🏗️ Layered Architecture</span>
+        </div>
+
+        <button id="theme-toggle" class="btn btn-secondary" 
+                style="position: absolute; right: 0; top: 0; 
+                       width: 40px; height: 40px; 
+                       padding: 0; 
+                       display: flex; justify-content: center; align-items: center;
+                       border-radius: 8px;
+                       font-size: 20px;">
+            🌙
+        </button>
+      
       </header>
 
       <div class="toolbar">
@@ -45,7 +58,6 @@
       <div id="book-list" class="book-grid"></div>
     </div>
 
-    <!-- Modal -->
     <div id="book-modal" class="modal">
       <div class="modal-content">
         <div class="modal-header">

@@ -79,6 +79,13 @@ header h1 {
     transition: all 0.3s;
 }
 
+/* ✅ เพิ่มคลาสสำหรับปุ่มขนาดเล็ก */
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: auto;
+}
+
 .btn-primary {
     background: #667eea;
     color: white;
@@ -298,4 +305,92 @@ header h1 {
     .book-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* =========================================
+   DARK MODE STYLES
+   ========================================= */
+
+/* 1. เปลี่ยนพื้นหลังหลัก และสีตัวอักษร */
+body.dark-mode {
+    background: #111827; 
+    color: #e5e7eb;
+}
+
+/* 2. ปรับกล่อง Container หลัก */
+body.dark-mode .container {
+    background-color: #1f2937;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* 3. ปรับสีหัวข้อต่างๆ */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3,
+body.dark-mode .book-card h3 {
+    color: #a5b4fc;
+}
+
+body.dark-mode .book-card .author {
+    color: #9ca3af;
+}
+
+/* 4. ปรับการ์ดหนังสือ (Book Card) */
+body.dark-mode .book-card {
+    background-color: #374151;
+    border-color: #4b5563;
+}
+
+body.dark-mode .book-card:hover {
+    border-color: #818cf8;
+}
+
+/* 5. ปรับช่องกรอกข้อมูล (Input) */
+body.dark-mode input {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #fff;
+}
+
+body.dark-mode input:focus {
+    border-color: #818cf8;
+}
+
+/* 6. ปรับ Modal (หน้าต่างเด้ง) */
+body.dark-mode .modal-content {
+    background-color: #1f2937;
+    color: #e5e7eb;
+}
+
+body.dark-mode .close {
+    color: #9ca3af;
+}
+
+body.dark-mode .close:hover {
+    color: #ef4444;
+}
+
+/* 7. ปรับปุ่ม Filter */
+body.dark-mode .filter-btn {
+    background-color: #374151;
+    color: #a5b4fc;
+    border-color: #6366f1;
+}
+
+body.dark-mode .filter-btn:hover,
+body.dark-mode .filter-btn.active {
+    background-color: #6366f1;
+    color: white;
+}
+
+/* 8. ปรับ Badge สถานะให้ดูซอฟต์ลง */
+body.dark-mode .badge {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+/* ปรับสีปุ่ม Cancel ในฟอร์ม */
+body.dark-mode .btn-secondary {
+    background-color: #4b5563;
+    color: #e5e7eb;
 }
